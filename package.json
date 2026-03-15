@@ -1,8 +1,12 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/romz987/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/romz987/frontend-project-44/actions)",
+  "description": "Hexlet College Educational Package",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "homepage": "https://github.com/romz987/frontend-project-44#readme",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/romz987/frontend-project-44/issues"
   },
@@ -11,7 +15,7 @@
     "url": "git+https://github.com/romz987/frontend-project-44.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "Roman Balashov",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
