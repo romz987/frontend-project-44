@@ -6,7 +6,6 @@
     "brain-games": "bin/brain-games.js"
   },
   "homepage": "https://github.com/romz987/frontend-project-44#readme",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/romz987/frontend-project-44/issues"
   },
@@ -16,7 +15,7 @@
   },
   "license": "ISC",
   "author": "Roman Balashov",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
