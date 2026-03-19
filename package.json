@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Hexlet College Educational Package",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "homepage": "https://github.com/romz987/frontend-project-44",
   "license": "ISC",
