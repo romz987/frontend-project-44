@@ -33,7 +33,7 @@ const startBrainEvenGame = () => {
     // check validity
     if (!checkAnswerValidity(userAnswer)) {
       console.log(
-        `'$userAnswer}' is wrong answer ;(. Correct answer should be 'yes' or 'no'.\nLet's try again, ${userName}`,
+        `'${userAnswer}' is wrong answer ;(. Correct answer should be 'yes' or 'no'.\nLet's try again, ${userName}`,
       )
       break
     }
