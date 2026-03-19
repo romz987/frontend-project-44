@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-import sayHello from '../src/cli.js'
+import { askQuestion } from '../src/cli.js'
 
+// Greeting
 console.log('Welcome to the Brain Games!')
-
-sayHello()
+const userName = askQuestion(`May I have your name?`)
+console.log(`Hello, ${userName}!`)
