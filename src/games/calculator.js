@@ -10,4 +10,6 @@ const generateRound = () => {
   return [`${firstNum} + ${secondNum}`, correctAnswer]
 }
 
-runGameLogic(DESCRIPTION, generateRound)
+export default () => {
+  runGameLogic(DESCRIPTION, generateRound)
+}
