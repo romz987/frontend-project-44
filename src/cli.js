@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync'
 
-export const askQuestion = (question) => {
+export default (question) => {
   return readlineSync.question(`${question} `)
 }
