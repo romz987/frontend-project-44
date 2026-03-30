@@ -8,15 +8,10 @@ const calculateNod = (firstNum, secondNum) => {
   return result === 0 ? secondNum : calculateNod(secondNum, result)
 }
 
-const getNod = (firstNum, secondNum) => {
-  [firstNum, secondNum] = [firstNum, secondNum].sort((a, b) => b - a)
-  return calculateNod(firstNum, secondNum)
-}
-
 const generateRound = () => {
   const firstNum = genRandomNumber(100)
   const secondNum = genRandomNumber(100)
-  const correctAnswer = getNod(firstNum, secondNum)
+  const correctAnswer = calculateNod(firstNum, secondNum)
   return [`${firstNum} ${secondNum}`, correctAnswer]
 }
 
