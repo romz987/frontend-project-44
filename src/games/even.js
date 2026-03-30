@@ -1,5 +1,5 @@
-import { genRandomNumber } from "../utils.js";
-import runGameLogic from "../gameLogic.js";
+import { genRandomNumber } from '../utils.js'
+import runGameLogic from '../gameLogic.js'
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 

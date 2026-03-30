@@ -1,4 +1,4 @@
-import askQuestion from "./cli.js"
+import askQuestion from './cli.js'
 
 const runGameLogic = (description, generateRound, roundsCount = 3) => {
   // Greeting
@@ -9,7 +9,7 @@ const runGameLogic = (description, generateRound, roundsCount = 3) => {
 
   // Logic
   while (roundsCount > 0) {
-    // Generate question 
+    // Generate question
     const roundData = generateRound()
     const question = roundData[0]
     const correctAnswer = roundData[1].toString()
@@ -20,7 +20,8 @@ const runGameLogic = (description, generateRound, roundsCount = 3) => {
     // Check result
     if (userAnswer === correctAnswer) {
       console.log('Correct!')
-    } else {
+    }
+    else {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`)
       console.log(`Let's try again, ${userName}!`)
       break
@@ -34,6 +35,6 @@ const runGameLogic = (description, generateRound, roundsCount = 3) => {
   if (roundsCount === 0) {
     console.log(`Congratulations, ${userName}!`)
   }
-} 
+}
 
 export default runGameLogic

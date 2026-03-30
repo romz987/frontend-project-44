@@ -1,7 +1,7 @@
-import { genRandomNumber } from "../utils.js";
-import runGameLogic from "../gameLogic.js";
+import { genRandomNumber } from '../utils.js'
+import runGameLogic from '../gameLogic.js'
 
-const DESCRIPTION = "What is the result of the expression?"
+const DESCRIPTION = 'What is the result of the expression?'
 
 const generateRound = () => {
   const firstNum = genRandomNumber(100)

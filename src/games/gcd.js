@@ -1,11 +1,11 @@
-import { genRandomNumber } from "../utils.js";
-import runGameLogic from "../gameLogic.js";
+import { genRandomNumber } from '../utils.js'
+import runGameLogic from '../gameLogic.js'
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 const calculateNod = (firstNum, secondNum) => {
   let result = firstNum % secondNum
-  return result === 0 ? secondNum : calculateNod(secondNum, result) 
+  return result === 0 ? secondNum : calculateNod(secondNum, result)
 }
 
 const getNod = (firstNum, secondNum) => {
