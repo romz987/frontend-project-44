@@ -18,14 +18,12 @@ const runGameLogic = (description, generateRound, roundsCount = 3) => {
     const userAnswer = askQuestion(`Question: ${question}\nYour answer:`)
 
     // Check result
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!')
-    }
-    else {
+    if (userAnswer !== correctAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`)
       console.log(`Let's try again, ${userName}!`)
       break
     }
+    console.log('Correct!')
 
     // Rounds counter
     roundsCount -= 1
