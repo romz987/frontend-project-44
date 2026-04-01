@@ -8,7 +8,7 @@ const checkParity = num => num % 2 === 0
 const generateRound = () => {
   const num = genRandomNumber(100)
   const correctAnswer = checkParity(num) ? 'yes' : 'no'
-  return [`Question: ${num}`, correctAnswer]
+  return [`${num}`, correctAnswer]
 }
 
 export default () => {
