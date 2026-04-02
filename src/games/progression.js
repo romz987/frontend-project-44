@@ -33,6 +33,8 @@ const generateRound = () => {
   return [`${progression.join(' ')} `, correctAnswer]
 }
 
-export default () => {
+const start = () => {
   runGameLogic(DESCRIPTION, generateRound)
 }
+
+export default start
