@@ -23,7 +23,7 @@ const generateRound = () => {
   const step = genRandomNumberInRange(2, 10)
   const length = genRandomNumberInRange(5, 15)
   const initialProgression = generateProgression(start, step, length)
-  // Get hidden number index 
+  // Get hidden number index
   const hiddenNumberIndex = genRandomNumberInRange(0, length - 1)
   const question = generateQuestion(initialProgression, hiddenNumberIndex)
   const progression = question[0]
