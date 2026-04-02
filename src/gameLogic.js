@@ -12,7 +12,7 @@ const runGameLogic = (description, generateRound, roundsCount = 3) => {
     // Generate question
     const roundData = generateRound()
     const question = roundData[0]
-    const correctAnswer = roundData[1].toString()
+    const correctAnswer = roundData[1]
 
     // Ask question
     const userAnswer = askQuestion(`Question: ${question}\nYour answer:`)

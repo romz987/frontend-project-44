@@ -7,7 +7,7 @@ const generateRound = () => {
   const firstNum = genRandomNumber(100)
   const secondNum = genRandomNumber(100)
   const correctAnswer = firstNum + secondNum
-  return [`${firstNum} + ${secondNum}`, correctAnswer]
+  return [`${firstNum} + ${secondNum}`, correctAnswer.toString()]
 }
 
 const start = () => {

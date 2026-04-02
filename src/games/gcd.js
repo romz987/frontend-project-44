@@ -3,16 +3,18 @@ import runGameLogic from '../gameLogic.js'
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
-const calculateNod = (firstNum, secondNum) => {
-  let result = firstNum % secondNum
-  return result === 0 ? secondNum : calculateNod(secondNum, result)
+const calculateNod = (a, b) => {
+  if (b === 0) {
+    return a
+  }
+  return calculateNod(b, a % b)
 }
 
 const generateRound = () => {
   const firstNum = genRandomNumber(100)
   const secondNum = genRandomNumber(100)
   const correctAnswer = calculateNod(firstNum, secondNum)
-  return [`${firstNum} ${secondNum}`, correctAnswer]
+  return [`${firstNum} ${secondNum}`, correctAnswer.toString()]
 }
 
 const start = () => {

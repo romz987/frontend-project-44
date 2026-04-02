@@ -3,18 +3,15 @@ import runGameLogic from '../gameLogic.js'
 
 const DESCRIPTION = 'What number is missing in the progression?'
 
-const generateProgression = (start, index, step, length) => {
-  const progression = [start]
-  for (let i = 0; i < length - 1; i++) {
-    start = start + index * step
-    progression.push(start)
+const generateProgression = (start, step, length) => {
+  const progression = []
+  for (let i = 0; i < length; i++) {
+    progression.push(start + i * step)
   }
   return progression
 }
 
-const generateQuestion = (progression) => {
-  const length = progression.length
-  const hiddenNumberIndex = genRandomNumberInRange(0, length)
+const generateQuestion = (progression, hiddenNumberIndex) => {
   const correctAnswer = progression[hiddenNumberIndex]
   const resultProgression = [...progression]
   resultProgression[hiddenNumberIndex] = '..'
@@ -23,14 +20,15 @@ const generateQuestion = (progression) => {
 
 const generateRound = () => {
   const start = genRandomNumber(100)
-  const index = genRandomNumberInRange(2, 10)
   const step = genRandomNumberInRange(2, 10)
   const length = genRandomNumberInRange(5, 15)
-  const initialProgression = generateProgression(start, index, step, length)
-  const question = generateQuestion(initialProgression)
+  const initialProgression = generateProgression(start, step, length)
+  // Get hidden number index 
+  const hiddenNumberIndex = genRandomNumberInRange(0, length - 1)
+  const question = generateQuestion(initialProgression, hiddenNumberIndex)
   const progression = question[0]
   const correctAnswer = question[1]
-  return [`${progression.join(' ')} `, correctAnswer]
+  return [`${progression.join(' ')}`, correctAnswer.toString()]
 }
 
 const start = () => {
