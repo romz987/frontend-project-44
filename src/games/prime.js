@@ -3,7 +3,7 @@ import runGameLogic from '../gameLogic.js'
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no"'
 
-const checkPrime = (value) => {
+const isPrime = (value) => {
   if (value < 2) return false
   if (value === 2) return true
   if (value % 2 === 0) return false
@@ -15,7 +15,7 @@ const checkPrime = (value) => {
 
 const generateRound = () => {
   const num = genRandomNumberInRange(2, 100)
-  const correctAnswer = checkPrime(num) ? 'yes' : 'no'
+  const correctAnswer = isPrime(num) ? 'yes' : 'no'
   return [`${num}`, correctAnswer]
 }
 
